@@ -6,7 +6,7 @@
   <input type="text" name="pet_name">
   <label>Existing Owners:</label>
   <% @owners.all do |owner| %>
-    <input type="radio" id="<%=owner.id%>" value="<%=owner.id%>"><%=owner.name%></input>
+    <input type="checkbox" id="<%=owner.id%>" value="<%=owner.id%>"><%=owner.name%></input>
     <br>
   <% end %>
 
