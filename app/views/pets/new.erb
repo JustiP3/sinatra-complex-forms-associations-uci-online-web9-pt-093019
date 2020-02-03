@@ -4,7 +4,15 @@
   <label>Pet Name:</label>
   <br>
   <input type="text" name="pet_name">
-
+  <label>Existing Owners:</label>
+  <% @owners.all do |owner| %>
+    <input type="radio" id="<%=owner.id%>" value="<%=owner.id%>"><%=owner.name%></input>
+    <br>
+  <% end %>
 
   <input type="submit" value="Create Pet">
 </form>
+
+
+<input type="radio" id="louie" name="drone" value="louie">
+<label for="louie">Louie</label>
